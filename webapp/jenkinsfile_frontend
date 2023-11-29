@@ -31,7 +31,7 @@ pipeline {
         stage('Running the docker container') {
             steps {
                 sh 'docker container rm --force fe'
-                sh 'docker run -d -p 8081:8080 --name fe vamsisqldba2401/8am-lms-fe'
+                sh 'docker run -dt -p 8081:80 --name fe vamsisqldba2401/8am-lms-fe'
             }
         }
     }
